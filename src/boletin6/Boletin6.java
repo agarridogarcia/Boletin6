@@ -15,12 +15,13 @@ public class Boletin6 {
         conta1.setNomeCliente("María García");
         conta1.setNumeroConta("00009871");
         conta1.setSaldo(18976);
-        conta1.ingresar(1345);
-        conta1.retirar(1000);
-        conta1.transferencia(100,"00398678" );
-        conta1.visualizar();
-     
+        conta1.ingresar(conta1,1230);
+        conta1.retirar(conta1,1000);
         
+      
+     
+        Conta conta2=new Conta("aaaaa","111111",123);
+        conta2.transferencia(11233, "00009871");
         
        
         

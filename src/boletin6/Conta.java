@@ -36,18 +36,18 @@ public class Conta {
         numeroConta=numConta;
     }
     
-    public void ingresar (double n1){
-        if (n1>=0){
-            saldo=n1+saldo;
+    public void ingresar (Conta libreta, double ingreso){
+        if (ingreso>=0){
+            saldo=ingreso+libreta.saldo;
             System.out.println("O seu saldo actual é de " + saldo + " €");
         }
         else
             System.out.println("Introduza unha nova cantidade");
     }
-    public void retirar (double n1){
-        if (n1<=saldo){
-            saldo=saldo-n1;
-            System.out.println("Acaba de retirar " + n1 + " € " );
+    public void retirar (Conta libreta, double retiro){
+        if (retiro<= libreta.saldo){
+            saldo=libreta.saldo-retiro;
+            System.out.println("Acaba de retirar " + retiro + " €, e actualmente ten: " + (libreta.saldo-retiro) + " € ");
         }
         else 
             System.out.println("Non ten suficiente saldo");
